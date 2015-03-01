@@ -53,7 +53,7 @@ Let us tell `gvm` which version of `go` we wish to use:
 
     export GOROOT=$HOME/go
     export PATH=$PATH:$GOROOT/bin
-Add the above to `~/.bashrc` and then reopen the tty or do `source ~/.bashrc`:  
+Add the above to `~/.bashrc` and then reopen the tty or do `source ~/.bashrc`.  
 
 Do a final check to see if `go` is installed and running fine:
 
