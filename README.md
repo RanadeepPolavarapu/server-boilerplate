@@ -4,11 +4,15 @@ A personal boilerplate for setting up new Ubuntu/Debian servers for core program
 
 # Installation Steps
 
-Step 1 - Install prerequisites:  
+Step 1 - Install Core Essentials:  
 --------------------
     sudo apt-get -y update
     sudo apt-get -y update
-    sudo apt-get -y install build-essential curl git mercurial make binutils bison gcc
+    sudo apt-get -y install build-essential curl git mercurial make binutils bison gcc 
+
+Step 2 - Install Python Prerequisites
+---------------------------------------
+    sudo apt-get -y install python-pip python3-pip python-dev python3-dev virtualenv
 
 Step 2 - Install Golang
 --------------------
