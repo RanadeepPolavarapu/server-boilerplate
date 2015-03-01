@@ -50,10 +50,10 @@ Let us tell `gvm` which version of `go` we wish to use:
     Now using version go1.4.1
 
 `gvm` auto sets `$GOROOT` and `$GOPATH` environment variables however, it sets them into `.gvm/` directory. Let's set them to the normal `$HOME/go` dir.  
-Add to `~/.bashrc` and then reopen the tty or do `source ~/.bashrc`:  
 
     export GOROOT=$HOME/go
     export PATH=$PATH:$GOROOT/bin
+Add the above to `~/.bashrc` and then reopen the tty or do `source ~/.bashrc`:  
 
 Do a final check to see if `go` is installed and running fine:
 
