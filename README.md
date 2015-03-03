@@ -14,7 +14,7 @@ Step 2 - Install Python Prerequisites
 ---------------------------------------
     sudo apt-get -y install python-pip python3-pip python-dev python3-dev virtualenv
 
-Step 2 - Install Golang
+Step 3 - Install Golang
 --------------------
 A list of all available Golang versions at the time of writing this document.
 
