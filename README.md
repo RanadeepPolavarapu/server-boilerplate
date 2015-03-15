@@ -108,7 +108,7 @@ Check node version:
 
 All set to work with Node.js, `npm` is installed by default with an `nvm` installation.
 
-Step 4 - Install Ruby
+Step 5 - Install Ruby
 --------------------
 Install Ruby Version Manager ([rvm](https://rvm.io/)):  
 
