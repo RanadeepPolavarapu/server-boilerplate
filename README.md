@@ -94,6 +94,9 @@ Install the latest version of Node.js:
 	node -> stable (-> v0.12.0) (default)
 	stable -> 0.12 (-> v0.12.0) (default)
 	iojs -> iojs- (-> N/A) (default)
+
+Optional/easiest way is to install the stable version:  
+
 	root@dev:~# nvm install stable
 	v0.12.0 is already installed.
 	Now using node v0.12.0
