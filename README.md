@@ -128,3 +128,5 @@ Do a Ruby version check:
 	root@dev:~$ ruby -v
 	ruby 2.2.0p0 (2014-12-25 revision 49005) [i686-linux]
 
+NOTE: Ruby installation takes a couple minutes. It is not as quick as Golang and Node.js so be patient.
+
