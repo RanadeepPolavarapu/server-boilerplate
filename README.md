@@ -4,7 +4,7 @@ A personal boilerplate for setting up new Ubuntu/Debian servers for core program
 
 # Installation Steps
 
-Step 1 - Install Core Essentials:  
+Step 1 - Install Core Essentials  
 --------------------
     sudo apt-get -y update
     sudo apt-get -y upgrade
@@ -16,6 +16,7 @@ Step 2 - Install Python Prerequisites
 
 Step 3 - Install Golang
 --------------------
+Install [gvm](https://github.com/creationix/nvm)  
 A list of all available Golang versions at the time of writing this document.
 
     root@git:~# gvm listall
@@ -59,3 +60,6 @@ Do a final check to see if `go` is installed and running fine:
 
     root@git:~# go version
     go version go1.4.1 linux/amd64
+
+Step 4 - Install Node.js
+--------------------
