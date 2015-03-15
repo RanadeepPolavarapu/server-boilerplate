@@ -98,3 +98,10 @@ Install the latest version of Node.js:
 	v0.12.0 is already installed.
 	Now using node v0.12.0
 
+Check node version:  
+
+	root@dev:~# node -v
+	v0.12.0
+
+All set to work with Node.js, `npm` is installed by default with an `nvm` installation.
+
