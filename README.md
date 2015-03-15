@@ -16,7 +16,14 @@ Step 2 - Install Python Prerequisites
 
 Step 3 - Install Golang
 --------------------
-Install [gvm](https://github.com/creationix/nvm)  
+Install Go Version Manager ([gvm](https://github.com/moovweb/gvm)) prerequisites:  
+	
+	sudo apt-get -y install curl git mercurial make binutils bison gcc build-essential
+	
+Install [gvm](https://github.com/moovweb/gvm):  
+
+	bash < <(curl -s -S -L https://raw.githubusercontent.com/moovweb/gvm/master/binscripts/gvm-installer)
+
 A list of all available Golang versions at the time of writing this document.
 
     root@git:~# gvm listall
@@ -63,3 +70,31 @@ Do a final check to see if `go` is installed and running fine:
 
 Step 4 - Install Node.js
 --------------------
+Install Node Version Manager ([nvm](https://github.com/creationix/nvm)):  
+	
+	curl https://raw.githubusercontent.com/creationix/nvm/v0.24.0/install.sh | bash
+
+Install the latest version of Node.js:  
+
+	root@dev:~# nvm ls-remote
+			v0.1.14
+			v0.1.15
+			v0.1.16
+			...
+			v0.11.15
+			v0.11.16
+			v0.12.0
+
+	root@dev:~# nvm install 0.12.0
+	######################################################################## 100.0%
+	Now using node v0.12.0
+	root@dev:~# nvm ls
+	->      v0.12.0
+			 system
+	node -> stable (-> v0.12.0) (default)
+	stable -> 0.12 (-> v0.12.0) (default)
+	iojs -> iojs- (-> N/A) (default)
+	root@dev:~# nvm install stable
+	v0.12.0 is already installed.
+	Now using node v0.12.0
+
