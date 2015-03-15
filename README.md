@@ -26,7 +26,7 @@ Install [gvm](https://github.com/moovweb/gvm):
 
 A list of all available Golang versions at the time of writing this document.
 
-    root@git:~# gvm listall
+    root@dev:~# gvm listall
     
     gvm gos (available)
     
@@ -47,14 +47,14 @@ A list of all available Golang versions at the time of writing this document.
 
 Let's install the latest **stable** version:
 
-    root@git:~# gvm install go1.4.1
+    root@dev:~# gvm install go1.4.1
     Installing go1.4.1...
      * Compiling...
-    root@git:~# 
+    root@dev:~# 
 
 Let us tell `gvm` which version of `go` we wish to use:
 
-    root@git:~# gvm use go1.4.1 [--default]
+    root@dev:~# gvm use go1.4.1 [--default]
     Now using version go1.4.1
 
 `gvm` auto sets `$GOROOT` and `$GOPATH` environment variables however, it sets them into `.gvm/` directory. Let's set them to the normal `$HOME/go` dir.  
@@ -65,7 +65,7 @@ Add the above to `~/.bashrc` and then reopen the tty or do `source ~/.bashrc`.
 
 Do a final check to see if `go` is installed and running fine:
 
-    root@git:~# go version
+    root@dev:~# go version
     go version go1.4.1 linux/amd64
 
 Step 4 - Install Node.js
