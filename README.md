@@ -12,7 +12,9 @@ Step 1 - Install Core Essentials
 
 Step 2 - Install Python Prerequisites
 ---------------------------------------
-    sudo apt-get -y install python-pip python3-pip python-dev python3-dev virtualenv
+Install fail2ban as well while we're at it for security:  
+
+    sudo apt-get -y install python-pip python3-pip python-dev python3-dev virtualenv fail2ban
 
 Step 3 - Install Golang
 --------------------
