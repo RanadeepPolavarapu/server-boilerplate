@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-# --- Terminal Colours --- START ---
+# --- Terminal Colours Documentation --- START ---
 # All colours and text styles are output using `tput`.
 # Example:  echo "$(tput setaf 1)Hello, world$(tput sgr0)"
 
@@ -31,7 +31,7 @@
 # Reset `tput`:
 # tput sgr0    # Reset text format to the terminal's default
 # tput bel     # Play a bell
-# --- Terminal Colours --- END ---
+# --- Terminal Colours Documentation --- END ---
 
 
 # --- Initialize SUPERUSER mode ---
