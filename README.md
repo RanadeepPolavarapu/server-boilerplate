@@ -167,3 +167,9 @@ Do a Ruby version check:
 
 NOTE: Ruby installation takes a couple minutes. It is not as quick as Golang and Node.js so be patient.
 
+To upgrade RVM itself do:
+
+	rvm get stable
+	rvm cleanup all
+
+
