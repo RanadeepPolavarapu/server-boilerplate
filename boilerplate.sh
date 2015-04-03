@@ -34,12 +34,35 @@
 # --- Terminal Colours Documentation --- END ---
 
 
+# --- Utility Function Definitions --- START ---
+function util_log_info {
+	formatted_date=`date +"%a, %b %d, %Y - %r %Z"`
+	echo -e "$(tput setaf 6)[INFO]: $formatted_date $(tput sgr0)- $1 $(tput sgr0)"
+}
+
+function util_log_warn {
+	formatted_date=`date +"%a, %b %d, %Y - %r %Z"`
+	echo -e "$(tput setaf 3)[WARNING]: $formatted_date $(tput sgr0)- $1 $(tput sgr0)"
+}
+
+function util_log_error {
+	formatted_date=`date +"%a, %b %d, %Y - %r %Z"`
+	echo -e "$(tput setaf 1)[ERROR]: $formatted_date $(tput sgr0)- $1 $(tput sgr0)"
+}
+
+function util_log_success {
+	formatted_date=`date +"%a, %b %d, %Y - %r %Z"`
+	echo -e "$(tput setaf 2)[SUCCESS]: $formatted_date $(tput sgr0)- $1 $(tput sgr0)"
+}
+# --- Utility Function Definitions --- END ---
+
 # --- Initialize SUPERUSER mode ---
 # Perform an initial sudo command by taking superuser password as argv at location 1.
 # This will allow this shell script to perform operations with sudo without password prompt every time.
-echo ${1} | sudo -S ls
+echo ${1} | sudo -S ls 1> /dev/null
+util_log_warn "Activated SUPERUSER mode!"
 
 sudo apt-get -y update 1> /dev/null
-echo -e "[INFO]: | $(date) | Performed apt-get update."
+util_log_info "Performed apt-get update."
 sudo apt-get -y upgrade 1> /dev/null
-echo -e "[INFO]: $(date) - Performed apt-get upgrade."
+util_log_info "Performed apt-get upgrade."
