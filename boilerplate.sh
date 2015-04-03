@@ -78,5 +78,3 @@ sudo apt-get -y install curl git mercurial make binutils bison gcc build-essenti
 util_log_info "Installed gvm (Go Version Manager) prerequisties."
 bash < <(curl -s -S -L https://raw.githubusercontent.com/moovweb/gvm/master/binscripts/gvm-installer) 1> /dev/null
 util_log_info "Installed gvm!"
-
-gvm listall
