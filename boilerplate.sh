@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+# Written by: Ranadeep Polavarapu.
+
 # --- Terminal Colours Documentation --- START ---
 # All colours and text styles are output using `tput`.
 # Example:  echo "$(tput setaf 1)Hello, world$(tput sgr0)"
