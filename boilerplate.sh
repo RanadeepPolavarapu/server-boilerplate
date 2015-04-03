@@ -74,7 +74,7 @@ util_log_info "Installed core essentials!"
 sudo apt-get -y install python-pip python3-pip python-dev python3-dev virtualenv fail2ban 1> /dev/null
 util_log_info "Installed Python prerequisties and fail2ban."
 
-sudo apt-get -y install curl git mercurial make binutils bison gcc build-essential
+sudo apt-get -y install curl git mercurial make binutils bison gcc build-essential 1> /dev/null
 util_log_info "Installed gvm (Go Version Manager) prerequisties."
 bash < <(curl -s -S -L https://raw.githubusercontent.com/moovweb/gvm/master/binscripts/gvm-installer) 1> /dev/null
 util_log_info "Installed gvm!"
