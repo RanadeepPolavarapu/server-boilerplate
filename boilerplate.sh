@@ -66,3 +66,17 @@ sudo apt-get -y update 1> /dev/null
 util_log_info "Performed apt-get update."
 sudo apt-get -y upgrade 1> /dev/null
 util_log_info "Performed apt-get upgrade."
+
+
+sudo apt-get -y install build-essential curl git 1> /dev/null
+util_log_info "Installed core essentials!"
+
+sudo apt-get -y install python-pip python3-pip python-dev python3-dev virtualenv fail2ban 1> /dev/null
+util_log_info "Installed Python prerequisties and fail2ban."
+
+sudo apt-get -y install curl git mercurial make binutils bison gcc build-essential
+util_log_info "Installed gvm (Go Version Manager) prerequisties."
+bash < <(curl -s -S -L https://raw.githubusercontent.com/moovweb/gvm/master/binscripts/gvm-installer) 1> /dev/null
+util_log_info "Installed gvm!"
+
+gvm listall
