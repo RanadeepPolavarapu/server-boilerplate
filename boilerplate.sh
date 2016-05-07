@@ -71,7 +71,7 @@ util_log_info "Performed apt-get upgrade."
 
 
 sudo apt-get -y install build-essential curl git vsftpd 1> /dev/null
-util_log_info "Installed core essentials!"
+util_log_info "Installed build essentials and SFTP server!"
 
 sudo apt-get -y install python-pip python3-pip python-dev python3-dev virtualenv fail2ban 1> /dev/null
 util_log_info "Installed Python prerequisties and fail2ban."
