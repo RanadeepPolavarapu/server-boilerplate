@@ -172,4 +172,8 @@ To upgrade RVM itself do:
 	rvm get stable
 	rvm cleanup all
 
-
+Step 6 - Install [Redis](http://redis.io/)
+--------------------
+``` sh
+wget http://download.redis.io/releases/redis-stable.tar.gz
+```
