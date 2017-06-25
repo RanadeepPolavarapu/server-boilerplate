@@ -8,7 +8,7 @@ Step 1 - Install Core Essentials
 --------------------
     sudo apt-get -y update
     sudo apt-get -y upgrade
-    sudo apt-get -y install build-essential cmake curl git vsftpd
+    sudo apt-get -y install build-essential cmake curl git vsftpd p7zip-full
 
 Step 2 - Install Python Prerequisites
 ---------------------------------------
