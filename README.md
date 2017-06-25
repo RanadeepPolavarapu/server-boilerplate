@@ -18,6 +18,14 @@ Install fail2ban as well while we're at it for security:
 
 Install [pyenv](https://github.com/pyenv/pyenv) for managing Python versions for system and application level.
 
+Install useful Python packages.
+
+	pip install --upgrade awscli
+
+Configure Amazon AWS CLI:
+
+	root@data-staging:~# aws configure
+	AWS Access Key ID [None]: 
 
 Step 3 - Install Golang
 --------------------
