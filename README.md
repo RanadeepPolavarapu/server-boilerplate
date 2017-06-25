@@ -8,13 +8,16 @@ Step 1 - Install Core Essentials
 --------------------
     sudo apt-get -y update
     sudo apt-get -y upgrade
-    sudo apt-get -y install build-essential curl git vsftpd
+    sudo apt-get -y install build-essential cmake curl git vsftpd
 
 Step 2 - Install Python Prerequisites
 ---------------------------------------
 Install fail2ban as well while we're at it for security:  
 
     sudo apt-get -y install python-pip python3-pip python-dev python3-dev python-virtualenv fail2ban
+
+Install [pyenv](https://github.com/pyenv/pyenv) for managing Python versions for system and application level.
+
 
 Step 3 - Install Golang
 --------------------
