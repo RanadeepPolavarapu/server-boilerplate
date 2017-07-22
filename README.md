@@ -188,3 +188,10 @@ Step 6 - Install [Redis](http://redis.io/)
 ``` sh
 wget http://download.redis.io/releases/redis-stable.tar.gz
 ```
+
+Step 7 - Install [Cassandra](http://cassandra.apache.org/)
+--------------------
+	sudo apt-get -y install build-essential python-dev
+	sudo apt-get install libev4 libev-dev
+	pip3 install cassandra-driver
+	pip install lz4 # for optional compression support (http://datastax.github.io/python-driver/installation.html#optional-compression-support)
