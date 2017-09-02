@@ -14,7 +14,7 @@ Step 2 - Install Python Prerequisites
 ---------------------------------------
 Install fail2ban as well while we're at it for security:  
 
-    sudo apt-get -y install python-pip python3-pip python-dev python3-dev python-virtualenv fail2ban zlib1g-dev
+    sudo apt-get -y install python-dev python3-dev python-pip python3-pip python-virtualenv fail2ban zlib1g-dev
 
 Install [pyenv](https://github.com/pyenv/pyenv) for managing Python versions for system and application level.
 
