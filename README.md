@@ -27,7 +27,35 @@ Configure Amazon AWS CLI:
 	root@data-staging:~# aws configure
 	AWS Access Key ID [None]: 
 
-Step 3 - Install Golang
+
+Step 3 - Setup Leap Second Time Smearing (NTP)
+-----------------------------------------------
+Install `ntp`:  
+
+	sudo timedatectl set-ntp no
+	sudo apt-get install ntp -y
+	sudo ntpq -p
+
+Add Google Time Servers:
+
+	nano /etc/ntp.conf
+
+Add following config into `ntp.conf`:
+
+	# Specify one or more NTP servers.
+
+	# Use servers from the NTP Pool Project. Approved by Ubuntu Technical Board
+	# on 2011-02-08 (LP: #104525). See http://www.pool.ntp.org/join.html for
+	# more information.
+	server time1.google.com iburst
+	server time2.google.com iburst
+	server time3.google.com iburst
+	server time4.google.com iburst
+
+	# Use Ubuntu's ntp server as a fallback.
+	pool time.google.com
+
+Step 4 - Install Golang
 --------------------
 Install Go Version Manager ([gvm](https://github.com/moovweb/gvm)) prerequisites:  
 	
@@ -81,7 +109,7 @@ Do a final check to see if `go` is installed and running fine:
     root@dev:~# go version
     go version go1.4.1 linux/amd64
 
-Step 4 - Install Node.js
+Step 5 - Install Node.js
 --------------------
 Install Node Version Manager ([nvm](https://github.com/creationix/nvm)):  
 	
@@ -126,7 +154,7 @@ Check node version:
 
 All set to work with Node.js, `npm` is installed by default with an `nvm` installation.
 
-Step 5 - Install Ruby
+Step 6 - Install Ruby
 --------------------
 Install Ruby Version Manager ([rvm](https://rvm.io/)):  
 
@@ -183,13 +211,13 @@ To upgrade RVM itself do:
 	rvm get stable
 	rvm cleanup all
 
-Step 6 - Install [Redis](http://redis.io/)
+Step 7 - Install [Redis](http://redis.io/)
 --------------------
 ``` sh
 wget http://download.redis.io/releases/redis-stable.tar.gz
 ```
 
-Step 7 - Install [Cassandra](http://cassandra.apache.org/)
+Step 8 - Install [Cassandra](http://cassandra.apache.org/)
 --------------------
 	sudo apt-get -y install build-essential python-dev
 	sudo apt-get install libev4 libev-dev
