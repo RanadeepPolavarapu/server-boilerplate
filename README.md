@@ -36,7 +36,7 @@ Install `ntp`:
 	sudo apt-get install ntp -y
 	sudo ntpq -p
 
-Add Google Time Servers:
+Add [Google Time Servers](https://developers.google.com/time/):
 
 	nano /etc/ntp.conf
 
