@@ -55,6 +55,12 @@ Add following config into `ntp.conf`:
 	# Use Ubuntu's ntp server as a fallback.
 	pool time.google.com
 
+Restart `ntpd` to reload config and propogate from Google's NTP servers:
+
+	sudo service ntp restart
+	sudo ntpq -p
+
+
 Step 4 - Install Golang
 --------------------
 Install Go Version Manager ([gvm](https://github.com/moovweb/gvm)) prerequisites:  
