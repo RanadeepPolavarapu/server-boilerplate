@@ -4,13 +4,25 @@ A personal boilerplate for setting up new Ubuntu/Debian servers for core program
 
 # Installation Steps
 
-Step 1 - Install Core Essentials  
---------------------
+Step 1 - Setup English US Locale (`en_US.UTF-8`):
+----------------------------------------
+
+	locale-gen en_US.UTF-8
+	dpkg-reconfigure locale
+	dpkg-reconfigure keyboard-configuration
+	localedef -i en_US -c -f UTF-8 en_US.UTF-8
+	reboot -h now
+	locale
+
+Source: https://askubuntu.com/questions/770309/cannot-permanently-change-locale-on-16-04-server
+
+Step 2 - Install Core Essentials  
+---------------------------------
     sudo apt-get -y update
     sudo apt-get -y upgrade
     sudo apt-get -y install build-essential cmake curl git vsftpd p7zip-full
 
-Step 2 - Install Python Prerequisites
+Step 3 - Install Python Prerequisites
 ---------------------------------------
 Install fail2ban as well while we're at it for security:  
 
@@ -27,8 +39,20 @@ Configure Amazon AWS CLI:
 	root@data-staging:~# aws configure
 	AWS Access Key ID [None]: 
 
+Step 4 - Install Monitoring Utilities
+---------------------------------------
 
-Step 3 - Setup Leap Second Time Smearing (NTP)
+Install monitoring tools:
+	
+	sudo apt-get -y install htop iftop iotop iostat
+
+
+Install [glances](https://github.com/nicolargo/glances):
+
+	pip install 'glances[action,browser,cloud,cpuinfo,chart,docker,folders,gpu,ip,raid,snmp,web,wifi]'
+
+
+Step 5 - Setup Leap Second Time Smearing (NTP)
 -----------------------------------------------
 Install `ntp`:  
 
@@ -61,7 +85,7 @@ Restart `ntpd` to reload config and propogate from Google's NTP servers:
 	sudo ntpq -p
 
 
-Step 4 - Install Golang
+Step 6 - Install Golang
 --------------------
 Install Go Version Manager ([gvm](https://github.com/moovweb/gvm)) prerequisites:  
 	
@@ -115,7 +139,7 @@ Do a final check to see if `go` is installed and running fine:
     root@dev:~# go version
     go version go1.4.1 linux/amd64
 
-Step 5 - Install Node.js
+Step 7 - Install Node.js
 --------------------
 Install Node Version Manager ([nvm](https://github.com/creationix/nvm)):  
 	
@@ -160,7 +184,7 @@ Check node version:
 
 All set to work with Node.js, `npm` is installed by default with an `nvm` installation.
 
-Step 6 - Install Ruby
+Step 8 - Install Ruby
 --------------------
 Install Ruby Version Manager ([rvm](https://rvm.io/)):  
 
@@ -217,13 +241,13 @@ To upgrade RVM itself do:
 	rvm get stable
 	rvm cleanup all
 
-Step 7 - Install [Redis](http://redis.io/)
+Step 9 - Install [Redis](http://redis.io/)
 --------------------
 ``` sh
 wget http://download.redis.io/releases/redis-stable.tar.gz
 ```
 
-Step 8 - Install [Cassandra](http://cassandra.apache.org/)
+Step 10 - Install [Cassandra](http://cassandra.apache.org/)
 --------------------
 	sudo apt-get -y install build-essential python-dev
 	sudo apt-get install libev4 libev-dev
