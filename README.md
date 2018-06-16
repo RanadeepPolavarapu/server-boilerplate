@@ -4,6 +4,28 @@ A personal boilerplate for setting up new Ubuntu/Debian servers for core program
 
 # Installation Steps
 
+zsh
+------
+Install zsh: 
+
+	sudo apt-get install zsh
+
+Install [oh-my-zsh](https://github.com/robbyrussell/oh-my-zsh):
+
+	sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+
+##### ~/.zshrc:
+
+	plugins=(
+	  git
+	  docker
+	  ubuntu
+	)
+
+	alias l='exa --all -bghlmU --time-style long-iso --git'
+	export LC_ALL=en_US.UTF-8
+
+
 Step 1 - Setup English US Locale (`en_US.UTF-8`):
 ----------------------------------------
 
