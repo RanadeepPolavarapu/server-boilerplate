@@ -84,8 +84,54 @@ Restart `ntpd` to reload config and propogate from Google's NTP servers:
 	sudo service ntp restart
 	sudo ntpq -p
 
+Step 6 - Install Memory SWAP
+-----------------------------
 
-Step 6 - Install Golang
+Check if swap already exists:
+
+	sudo swapon --show
+	free -h
+
+Check Available Space on the Hard Drive Partition (`/dev/vda`):
+
+	df -h
+
+Create a Swap File:
+
+	sudo fallocate -l 4G /swapfile
+	ls -lh /swapfile
+	
+Enabling the Swap File:
+
+	sudo chmod 600 /swapfile
+	ls -lh /swapfile
+	sudo mkswap /swapfile
+	sudo swapon /swapfile
+	sudo swapon --show
+	free -h
+
+Make the Swap File Permanent:
+
+	sudo cp /etc/fstab /etc/fstab.bak
+	echo '/swapfile none swap sw 0 0' | sudo tee -a /etc/fstab
+
+Tweak your Swap Settings:
+	
+	sudo sysctl vm.swappiness=10
+	sudo nano /etc/sysctl.conf
+
+Add `vm.swappiness=10` to end of `/etc/sysctl.conf`.
+
+	sudo sysctl vm.vfs_cache_pressure=50
+	sudo nano /etc/sysctl.conf
+
+Add `vm.vfs_cache_pressure=50` to end of `/etc/sysctl.conf`.
+
+	reboot -h now
+
+Source: https://www.digitalocean.com/community/tutorials/how-to-add-swap-space-on-ubuntu-16-04
+
+Step 7 - Install Golang
 --------------------
 Install Go Version Manager ([gvm](https://github.com/moovweb/gvm)) prerequisites:  
 	
@@ -139,7 +185,7 @@ Do a final check to see if `go` is installed and running fine:
     root@dev:~# go version
     go version go1.4.1 linux/amd64
 
-Step 7 - Install Node.js
+Step 8 - Install Node.js
 --------------------
 Install Node Version Manager ([nvm](https://github.com/creationix/nvm)):  
 	
@@ -184,7 +230,7 @@ Check node version:
 
 All set to work with Node.js, `npm` is installed by default with an `nvm` installation.
 
-Step 8 - Install Ruby
+Step 9 - Install Ruby
 --------------------
 Install Ruby Version Manager ([rvm](https://rvm.io/)):  
 
@@ -241,13 +287,13 @@ To upgrade RVM itself do:
 	rvm get stable
 	rvm cleanup all
 
-Step 9 - Install [Redis](http://redis.io/)
+Step 10 - Install [Redis](http://redis.io/)
 --------------------
 ``` sh
 wget http://download.redis.io/releases/redis-stable.tar.gz
 ```
 
-Step 10 - Install [Cassandra](http://cassandra.apache.org/)
+Step 11 - Install [Cassandra](http://cassandra.apache.org/)
 --------------------
 	sudo apt-get -y install build-essential python-dev
 	sudo apt-get install libev4 libev-dev
