@@ -23,7 +23,12 @@ Install [oh-my-zsh](https://github.com/robbyrussell/oh-my-zsh):
 	)
 
 	alias l='exa --all -bghlmU --time-style long-iso --git'
+	
 	export LC_ALL=en_US.UTF-8
+	export LANG=en_US.UTF-8
+	export LANGUAGE=en_US.UTF-8
+	export LC_COLLATE=C
+	export LC_CTYPE=en_US.UTF-8
 
 
 Step 1 - Setup English US Locale (`en_US.UTF-8`):
