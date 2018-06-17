@@ -8,7 +8,7 @@ zsh
 ------
 Install zsh: 
 
-	sudo apt-get install zsh
+	sudo apt-get -y install zsh
 
 Install [oh-my-zsh](https://github.com/robbyrussell/oh-my-zsh):
 
