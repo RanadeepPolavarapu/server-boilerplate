@@ -34,6 +34,8 @@ Install [oh-my-zsh](https://github.com/robbyrussell/oh-my-zsh):
 Step 1 - Setup English US Locale (`en_US.UTF-8`):
 ----------------------------------------
 
+	sudo apt-get -y install language-pack-en
+	
 	locale-gen en_US.UTF-8
 	dpkg-reconfigure locale
 	dpkg-reconfigure keyboard-configuration
