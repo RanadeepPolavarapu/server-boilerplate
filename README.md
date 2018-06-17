@@ -73,7 +73,7 @@ Step 4 - Install Monitoring Utilities
 
 Install monitoring tools:
 	
-	sudo apt-get -y install htop iftop iotop iostat
+	sudo apt-get -y install htop iftop iotop sysstat
 
 
 Install [glances](https://github.com/nicolargo/glances):
