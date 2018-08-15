@@ -145,17 +145,13 @@ Make the Swap File Permanent:
 	echo '/swapfile none swap sw 0 0' | sudo tee -a /etc/fstab
 
 Tweak your Swap Settings:
-	
+
+Add `vm.swappiness=10` and `vm.vfs_cache_pressure=50` to end of `/etc/sysctl.conf`.
+
 	sudo sysctl vm.swappiness=10
-	sudo nano /etc/sysctl.conf
-
-Add `vm.swappiness=10` to end of `/etc/sysctl.conf`.
-
 	sudo sysctl vm.vfs_cache_pressure=50
-	sudo nano /etc/sysctl.conf
-
-Add `vm.vfs_cache_pressure=50` to end of `/etc/sysctl.conf`.
-
+	echo "vm.swappiness=10" >> /etc/sysctl.conf
+	echo "vm.vfs_cache_pressure=50" >> /etc/sysctl.conf 
 	reboot -h now
 
 Source: https://www.digitalocean.com/community/tutorials/how-to-add-swap-space-on-ubuntu-16-04
