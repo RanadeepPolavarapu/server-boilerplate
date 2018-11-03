@@ -1,3 +1,10 @@
+### Running PostgreSQL with TimescaleDB on Docker
+
+```bash
+docker run -v /root/pg_data_vol:/var/lib/postgresql/data --restart always -d --name timescaledb -p 5432:5432 -e POSTGRES_PASSWORD=<PG_PWD> timescale/timescaledb:1.0.0-rc1-pg10
+```
+
+
 ### Upgrade TimescaleDB on Docker
 
 Docs: https://docs.timescale.com/v1.0/using-timescaledb/update-db
